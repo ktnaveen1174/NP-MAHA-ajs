@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'collegeworld';
+
+  constructor(private router:Router){}
+  
+  goToPage(pageName:string):void{
+    console.log("Page name", pageName)
+    this.router.navigate([`${pageName}`]);
+  }
 }

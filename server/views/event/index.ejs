@@ -1,0 +1,59 @@
+
+ <%- include('../partials/header')  %> 
+
+ <%- include ('../partials/main_nav') %>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+            <h1><%= title %></h1>
+            <a href="/event/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i> Add a Event</a>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                    <th class="text-center col-3">Event Name</th>
+                    <th class="text-center col-2">Description</th>
+                    <th class="text-center col-1">Date</th>
+                    <th class="text-centre col-1">Time</th>
+                    <th class="text-center col-3">Location</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < EventList.length; count++) { %>
+                    <tr class="d-flex">
+                        <td class="text-center col-3"><%= EventList[count].name %></td>
+                        <td class="text-center col-2"><%= EventList[count].description %></td>
+                        <td class="text-center col-1"><%= EventList[count].Date %></td>
+                        <td class="text-centre col-1"><%= EventList[count].TimeRanges %></td>
+                        <td class="text-center col-3"><%= EventList[count].location %></td>
+                        <td class="text-center col-1">
+                            <a href="/event/edit/<%= EventList[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                        </td>
+                        <td class="text-center col-1">
+                            <a href="/event/delete/<%= EventList[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+
+  <%- include ('../partials/bottom_nav') %>  
+  <%- include ('../partials/footer') %>
+  
+
+  
+
+
+
+
+
