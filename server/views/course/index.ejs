@@ -17,6 +17,7 @@
                 <!-- Header Row-->
                 <tr class="d-flex">
                     <% if(typeof displayName == 'string' && displayName) { %>
+<<<<<<< Updated upstream
                     <th class="text-center col-3">Course Name</th>
                     <th class="text-center col-2">Course Detail</th>
                     <th class="text-center col-1"></th>
@@ -24,6 +25,21 @@
                     <% } else { %>
                     <th class="text-center col-3">Course Name</th>
                     <th class="text-center col-2">Course Detail</th>
+=======
+                    <th class="text-center col-2">School</th>
+                    <th class="text-center col-2">Course Name</th>
+                    <th class="text-center col-2">Length</th>
+                    <th class="text-center col-2">Credentials</th>
+                    <th class="text-center col-2">Location</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                    <% } else { %>
+                    <th class="text-center col-3">School</th>
+                    <th class="text-center col-3">Course Name</th>
+                    <th class="text-center col-2">Length</th>
+                    <th class="text-center col-2">Credentials</th>
+                    <th class="text-center col-2">Location</th>  
+>>>>>>> Stashed changes
                     <% } %>
                 </tr>
 
@@ -32,8 +48,16 @@
                 <% for(let count = 0; count < CourseList.length; count++) { %>
                     <tr class="d-flex">
                         <% if(typeof displayName == 'string' && displayName) { %>
+<<<<<<< Updated upstream
                         <td class="text-center col-3"><%= CourseList[count].name %></td>
                         <td class="text-center col-2"><%= CourseList[count].detail %></td>
+=======
+                        <td class="text-center col-2"><%= CourseList[count].school %></td>
+                        <td class="text-center col-2"><%= CourseList[count].courseName %></td>
+                        <td class="text-center col-2"><%= CourseList[count].length %></td>
+                        <td class="text-center col-2"><%= CourseList[count].credentials %></td>
+                        <td class="text-center col-2"><%= CourseList[count].location %></td>
+>>>>>>> Stashed changes
                         <td class="text-center col-1">
                             <a href="/course/edit/<%= CourseList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i> Edit</a>
@@ -43,10 +67,20 @@
                             <i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
                         <% } else { %>
+<<<<<<< Updated upstream
                             <td class="text-center col-3"><%= CourseList[count].name %></td>
                             <td class="text-center col-2"><%= CourseList[count].detail %></td>
                         <% } %>
                         </tr>
+=======
+                        <td class="text-center col-3"><%= CourseList[count].school %></td>
+                        <td class="text-center col-3"><%= CourseList[count].courseName %></td>
+                        <td class="text-center col-2"><%= CourseList[count].length %></td>
+                        <td class="text-center col-2"><%= CourseList[count].credentials %></td>
+                        <td class="text-center col-2"><%= CourseList[count].location %></td>    
+                        <% } %>
+                    </tr>
+>>>>>>> Stashed changes
                 <% } %>
             </table>
         </div>

@@ -6,8 +6,13 @@ let jwt = require('jsonwebtoken');
 
 let passport = require('passport');
 
+<<<<<<< Updated upstream
 // connect to our Event Model
 let Event = require('../models/course');
+=======
+// connect to our Course Model
+let Course = require('../models/course');
+>>>>>>> Stashed changes
 
 // helper function for guard purposes
 function requireAuth(req, res, next)
@@ -20,6 +25,10 @@ function requireAuth(req, res, next)
     next();
 }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 let courseController = require('../controllers/course');
 
 /* GET Route for the Course List page - READ Operation */
