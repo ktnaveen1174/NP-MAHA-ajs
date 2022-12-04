@@ -6,7 +6,7 @@
   <!-- Main Content -->
   <main class="container" style="margin-left: -10px;">
     <div class="row">
-        <div class="offset-md-1 col-md-11">
+        <div class="offset-md-1 col-md-12">
             <h1><%= title %></h1>
             <a href="/student/add" class="btn btn-primary" role="button">
             <i class="fas fa-plus-circle"></i> Add a Student</a>
@@ -16,10 +16,11 @@
                 <tr class="d-flex">
                     <th class="text-center col-3">Student Name</th>
                     <th class="text-center col-2">Email Address</th>
-                    <th class="text-center col-1">Phone</th>
+                    <th class="text-center col-3">Phone</th>
                     <th class="text-centre col-1">Gender</th>
-                    <th class="text-center col-3">Semester</th>
-                    <th class="text-center col-3">Birth Date</th>
+                    <th class="text-center col-2">Semester</th>
+                    <th class="text-center col-2">Birth Date</th>
+                    <th class="text-center col-1">Course Id</th>
                     <th class="text-center col-1"></th>
                     <th class="text-center col-1"></th>
                 </tr>
@@ -30,10 +31,11 @@
                     <tr class="d-flex">
                         <td class="text-center col-3"><%= StudentList[count].name %></td>
                         <td class="text-center col-2"><%= StudentList[count].email %></td>
-                        <td class="text-center col-1"><%= StudentList[count].phone %></td>
+                        <td class="text-center col-3"><%= StudentList[count].phone %></td>
                         <td class="text-centre col-1"><%= StudentList[count].gender %></td>
-                        <td class="text-center col-3"><%= StudentList[count].semester %></td>
-                        <td class="text-center col-3"><%= StudentList[count].birthDate %></td>
+                        <td class="text-center col-2"><%= StudentList[count].semester %></td>
+                        <td class="text-center col-2"><%= StudentList[count].birthDate %></td>
+                        <td class="text-center col-1"><%= StudentList[count].course_id %></td>
                         <td class="text-center col-1">
                             <a href="/student/edit/<%= StudentList[count]._id %>" class="btn btn-primary btn-sm">
                             <i class="fas fa-pencil-alt"></i> Edit</a>
