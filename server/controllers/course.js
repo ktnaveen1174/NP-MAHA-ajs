@@ -28,8 +28,11 @@ module.exports.displayAddCoursePage = (req, res, next) => {
 
 module.exports.processAddPage = (req, res, next) => {
     let newCourse = Course({
-        "name": req.body.name,
-        "detail": req.body.detail
+        "school": req.body.school,
+        "courseName": req.body.courseName,
+        "length": req.body.length,
+        "credentials": req.body.credentials,
+        "location": req.body.location
     });
 
     Course.create(newCourse, (err, courseList) =>{
@@ -67,8 +70,11 @@ module.exports.processEditPage = (req, res, next) => {
 
     let updatedCourse = Course({
         "_id": id,
-        "name": req.body.name,
-        "detail": req.body.detail
+        "school": req.body.school,
+        "courseName": req.body.courseName,
+        "length": req.body.length,
+        "credentials": req.body.credentials,
+        "location": req.body.location
     });
 
     Course.updateOne({_id: id}, updatedCourse, (err) => {

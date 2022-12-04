@@ -10,19 +10,40 @@
 
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameTextField">Course Name</label>
+                    <label for="schoolTextField">School</label>
                     <input type="text" class="form-control"
-                    id="nameTextField"
+                    id="schoolTextField"
+                    placeholder="Enter the School Name"
+                    name="school" required>
+                </div>
+                <div class="form-group">
+                    <label for="courseNameTextField">Course Name</label>
+                    <input type="text" class="form-control"
+                    id="courseNameTextField"
                     placeholder="Enter the Course Name"
-                    name="name" required>
+                    name="courseName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lengthTextField">Length</label>
+                    <input type="text" class="form-control"
+                    id="lengthTextField"
+                    placeholder="Enter the Course Length"
+                    name="length" required>
+                </div>
+                <div class="form-group">
+                    <label for="credentialsTextField">Credentials</label>
+                    <input type="text" class="form-control"
+                    id="credentialsTextField"
+                    placeholder="Enter the Course Credentials"
+                    name="credentials" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="descriptionTextField">Detail</label>
+                    <label for="locationTextField">Location</label>
                     <input type="text" class="form-control"
-                    id="detailTextField"
-                    placeholder="Enter the Course's Detail"
-                    name="detail" required>
+                    id="locationTextField"
+                    placeholder="Enter the Location"
+                    name="location" required>
                 </div>
 
                 <button class="btn btn-primary" type="submit">

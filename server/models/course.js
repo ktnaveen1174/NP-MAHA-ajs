@@ -2,8 +2,11 @@ let mongoose = require('mongoose');
 
 // create a model class
 let courseModel = mongoose.Schema({
-    name: String,
-    detail: String
+    school: String,
+    courseName: String,
+    length: String,
+    credentials: String,
+    location: String
 },
 {
     collection: "courses"
