@@ -251,7 +251,7 @@
         <div class="course_content">
           <div class="box">
             <img src="images/c-1.jpg" alt="" />
-            <a href="/engineering" class="">
+            <a href="/course" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
@@ -261,7 +261,7 @@
           </div>
           <div class="box">
             <img src="images/c-2.jpg" alt="" />
-            <a href="/transportation" class="">
+            <a href="/course" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
@@ -273,7 +273,7 @@
         <div class="course_content">
           <div class="box">
             <img src="images/c-3.jpg" alt="" />
-            <a href="/business" class="">
+            <a href="/course" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
@@ -283,7 +283,7 @@
           </div>
           <div class="box">
             <img src="images/c-4.jpg" alt="" />
-            <a href="/communication" class="">
+            <a href="/course" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
@@ -293,7 +293,7 @@
           </div>
           <div class="box">
             <img src="images/c-5.jpg" alt="" />
-            <a href="/healthscience" class="">
+            <a href="/course" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
@@ -317,35 +317,64 @@
   <!-- login section -->
 
   <section class="login_section layout_padding">
-    <div class="container">
+    <!-- <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="detail-box">
-            <h3>
-              GET ONLINE COURSES FOR FREE
-            </h3>
-            <p>
-              Create your free account now and get immediate access to 100s of
-              online courses
-            </p>
-            <a href="">
+            <a href="/register">
               REGISTER NOW
             </a>
           </div>
-        </div>
-        <div class="col-md-6">
+        </div> -->
+        
+        <div class="col-md-6" style="margin:auto;">
           <div class="login_form">
-            <h5>
-              Login Now
-            </h5>
             <form action="">
-              <div>
-                <input type="email" placeholder="Email " />
-              </div>
-              <div>
-                <input type="password" placeholder="Password" />
-              </div>
-              <button type="submit">Login</button>
+              
+                <fieldset>
+                  <!-- <div class="dropdown">
+                    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                      Login as:
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Student</a></li>
+                      <li><a class="dropdown-item" href="#">Faculty</a></li>
+                      <li><a class="dropdown-item" href="#">Admin</a></li>
+                    </ul>
+                  </div> -->
+                  <div>
+                    <label>Login as:</label>
+                    <select name="userType" id="userType">
+                      <option value="Admin">Admin</option>
+                      <option value="Faculty">Faculty</option>
+                      <option value="Student">Student</option>
+                    </select>
+                  </div>
+                </fieldset>
+                <fieldset class="form-group">
+                  <label for="username">Username: </label>
+                  <input type="text" class="form-control"
+                  name="username" placeholder="Enter username"
+                  id="username" required autofocus>
+              </fieldset>
+
+              <fieldset class="form-group">
+                  <label for="password">Password: </label>
+                  <input type="password" class="form-control"
+                  name="password" placeholder="Enter password"
+                  id="password" required>
+              </fieldset>    
+                  
+              <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Login">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                    </a>
+                    or
+                    <a href="/register">Register Here</a>
+              </fieldset>
+             
             </form>
           </div>
         </div>
