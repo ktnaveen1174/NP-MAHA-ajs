@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-
+let jwt = require('jsonwebtoken');
 // create a reference to the model
 let Faculty = require('../models/faculty');
 
@@ -17,13 +17,13 @@ module.exports.displayFacultyList = (req, res, next) => {
         {
             //console.log(eventList);
 
-            res.render('faculty', {title: 'Faculty', FacultyList: facultyList});      
+            res.render('faculty', {title: 'Faculty', FacultyList: facultyList, displayName: req.user ? req.user.displayName : ''});      
         }
     });
 }
 module.exports.displayAddFacultyPage = (req, res, next) => {
     console.log("Display add page called")
-    res.render('faculty/add', {title: 'Add Faculty'})          
+    res.render('faculty/add', {title: 'Add Faculty', displayName: req.user ? req.user.displayName : ''})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -59,7 +59,7 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            res.render('faculty/edit', {title: 'Edit Faculty', faculty: facultyToEdit})
+            res.render('faculty/edit', {title: 'Edit Faculty', faculty: facultyToEdit, displayName: req.user ? req.user.displayName : ''})
         }
     });
 }

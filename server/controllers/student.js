@@ -1,7 +1,7 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-
+let jwt = require('jsonwebtoken');
 // create a reference to the model
 let Student = require('../models/student');
 
@@ -17,13 +17,13 @@ module.exports.displayStudentList = (req, res, next) => {
         {
             //console.log(eventList);
             console.log("Student list", studentList)
-            res.render('student', {title: 'Students', StudentList: studentList});      
+            res.render('student', {title: 'Students', StudentList: studentList, displayName: req.user ? req.user.displayName : ''});      
         }
     });
 }
 module.exports.displayAddStudentPage = (req, res, next) => {
     console.log("Display add page called")
-    res.render('student/add', {title: 'Add Student'})          
+    res.render('student/add', {title: 'Add Student', displayName: req.user ? req.user.displayName : ''})          
 }
 
 module.exports.processAddPage = (req, res, next) => {
@@ -66,7 +66,7 @@ module.exports.displayEditPage = (req, res, next) => {
         }
         else
         {
-            res.render('student/edit', {title: 'Edit Student', student: studentToEdit})
+            res.render('student/edit', {title: 'Edit Student', student: studentToEdit, displayName: req.user ? req.user.displayName : ''})
         }
     });
 }
