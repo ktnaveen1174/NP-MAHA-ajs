@@ -1,7 +1,77 @@
-<%- include('./partials/header')  %> 
+<!DOCTYPE html>
+<html>
 
-<%- include ('./partials/main_nav') %>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
+  <title>CollegeWorld</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.ejs">
+            <h3>
+              CollegeWorld
+            </h3>
+            <span> </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/course"> Courses </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/event"> Events </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/faculty"> Faculty </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
     <!-- slider section -->
     <section class=" slider_section position-relative">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -72,7 +142,7 @@
   </div>
 
   <!-- special section -->
-
+<!-- 
   <section class="special_section">
     <div class="container">
       <div class="special_container">
@@ -120,7 +190,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- end special section -->
 
@@ -148,9 +218,7 @@
                 About Our College
               </h3>
               <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more it
+                Launched in 2022, the website was designed by college students, and responsive design was among their top priorities. “We wanted to make the navigation as intuitive and simple as possible,”. “In a lot of ways a homepage is a portal, but we want it to be a more experiential, informative portal.” This website offers the student portal which contains different pages with unique design and easy but different nevigation system of the website
               </p>
               <a href="">
                 Read More
@@ -166,7 +234,7 @@
 
   <!-- course section -->
 
-  <section class="course_section layout_padding-bottom">
+  <section class="course_section layout_padding">
     <div class="side_img">
       <img src="images/side-img.png" alt="" />
     </div>
@@ -183,64 +251,66 @@
         <div class="course_content">
           <div class="box">
             <img src="images/c-1.jpg" alt="" />
-            <a href="" class="">
+            <a href="/engineering" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
-              LMS <br />
-              Content
+              School of Engineering Technology <br />
+              and Applied Sciences
             </h5>
           </div>
           <div class="box">
             <img src="images/c-2.jpg" alt="" />
-            <a href="" class="">
+            <a href="/transportation" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
-              From <br />
-              Zero to Hero
+              School of <br />
+              Transportation
             </h5>
           </div>
         </div>
         <div class="course_content">
           <div class="box">
             <img src="images/c-3.jpg" alt="" />
-            <a href="" class="">
+            <a href="/business" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
-              Learn <br />
-              Python – Interactive
+              The Business <br />
+              School
             </h5>
           </div>
           <div class="box">
             <img src="images/c-4.jpg" alt="" />
-            <a href="" class="">
+            <a href="/communication" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
-              Your <br />
-              Complete Guide
+              School of Communication, <br />
+              Media, Arts and Design
             </h5>
           </div>
           <div class="box">
             <img src="images/c-5.jpg" alt="" />
-            <a href="" class="">
+            <a href="/healthscience" class="">
               <img src="images/link.png" alt="" />
             </a>
             <h5>
-              Photography
+              School of Community <br />
+              and Health Studies
             </h5>
           </div>
         </div>
       </div>
-      <div class="btn-box">
+      <!-- <div class="btn-box">
         <a href="">
           Read More
         </a>
-      </div>
+      </div> -->
     </div>
   </section>
+
 
   <!-- end course section -->
 
@@ -293,55 +363,76 @@
           Events
         </h3>
         <p>
-          Upcoming Education Events to feed your brain.
+          Upcoming College Events to feed your brain.
         </p>
       </div>
       <div class="event_container">
         <div class="box">
           <div class="img-box">
-            <img src="images/event-img.jpg" alt="" />
+            <img src="images/Retro-Welcome-Bash.jpg" alt="" />
           </div>
           <div class="detail-box">
             <h4>
-              Education Events 2021
+              Retro Bash
             </h4>
             <h6>
-              8:00 AM - 5:00 PM VENICE, ITALY
+              5:00 PM - 1:00 AM Scarborough, Canada
             </h6>
           </div>
           <div class="date-box">
             <h3>
               <span>
-                15
+                20
               </span>
-              March
+              November
             </h3>
           </div>
         </div>
         <div class="box">
           <div class="img-box">
-            <img src="images/event-img.jpg" alt="" />
+            <img src="images/winter_hc.jpg" alt="" />
           </div>
           <div class="detail-box">
             <h4>
-              Education Events 2021
+              Winter Homecoming
             </h4>
             <h6>
-              8:00 AM - 5:00 PM VENICE, ITALY
+              8:00 AM - 5:00 PM Scarborough, Canada
             </h6>
           </div>
           <div class="date-box">
             <h3>
               <span>
-                15
+                20
               </span>
-              February
+              December
+            </h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="images/Winter-Progress-Holiday.jpg" alt="" />
+          </div>
+          <div class="detail-box">
+            <h4>
+              Holiday Starts
+            </h4>
+            <h6>
+              Happy Holidays! Stay Warm and Have Fun. 
+            </h6>
+          </div>
+          <div class="date-box">
+            <h3>
+              <span>
+                23
+              </span>
+              December
             </h3>
           </div>
         </div>
       </div>
       <div class="btn-box">
-        <a href="">
+        <a href="https://www.centennialcollege.ca/college-events-2022-2023">
           Read More
         </a>
       </div>
@@ -483,6 +574,92 @@
 
   <!-- end contact section -->
 
-  <%- include ('./partials/bottom_nav') %>  
-  <%- include ('./partials/footer') %>
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_menu">
+            <h5>
+              QUICK LINKS
+            </h5>
+            <ul class="navbar-nav  ">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about"> About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/course"> Courses </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/event"> Events </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_course">
+            <h5>
+              TOP RATED COURSE
+            </h5>
+            <p>
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humou
+            </p>
+          </div>
+        </div>
 
+        <div class="col-md-5 offset-md-1">
+          <div class="info_news">
+            <h5>
+              FOR ANY QUERY, PLEASE WRITE TO US
+            </h5>
+            <div class="info_contact">
+              <a href="">
+                Location
+              </a>
+              <a href="">
+                demo@gmail.com
+              </a>
+              <a href="">
+                Call : +01 1234567890
+              </a>
+            </div>
+            <form action="">
+              <input type="text" placeholder="Enter Your email" />
+              <button>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2021 All Rights Reserved By
+      <a href="https://html.design/">Free Html Templates</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
