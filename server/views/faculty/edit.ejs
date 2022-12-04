@@ -1,0 +1,56 @@
+
+<%- include('../partials/header')  %> 
+
+<%- include ('../partials/main_nav') %>
+
+<!-- Content for the Add page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameTextField">Faculty Name</label>
+                    <input type="text" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Faculty Name"
+                    name="name" 
+                    value="<%= faculty.name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descriptionTextField">Student Id</label>
+                    <input type="text" class="form-control"
+                    id="studentIdTextField"
+                    placeholder="Enter the Student Id"
+                    name="student_id" 
+                    value="<%= faculty.student_id %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateTextField">Course Id</label>
+                    <input type="text" class="form-control"
+                    id="courseIdTextField"
+                    placeholder="Enter the Course Id"
+                    name="course_id"
+                    value="<%= faculty.course_id %>"
+                    required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/faculty" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ('../partials/bottom_nav') %>  
+  <%- include ('../partials/footer') %>
